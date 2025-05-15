@@ -2,15 +2,15 @@
 
 ## Group Members:
 
-names here.(CHANGE THIS!!!!!)
+Victoria Shi
        
 # Intentions:
 
-A statement of the problem you are solving and/or a high level description of the project. (CHANGE THIS!!!!!)
+Create a image stegonography tool to create hidden messages that will be viewable in StegSolve.
     
 # Intended usage:
 
-A description as to how the project will be used (describe the user interface). (CHANGE THIS!!!!!)
+Users will run a makefile with certain flags to determine the message and type of encoding
   
 # Technical Details:
 
