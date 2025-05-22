@@ -9,3 +9,6 @@ Finalized project ideas and updated repo (20 min). Did research on how StegSolve
 ### 2025-5-17 - More Research
 Fleshed out how a string could potentially be hidden in the LSB of a img. First draw the string on a blank canvas the same size as the img. Then compare each pixel in the img to the one with the string and change the bit.
 ### 2025-5-19 - Started Processing
+Created processing file and started on how to change pixel colors in shape of image
+### 2025-5-20 More Processing
+Tried drawing text onto image. Pixel color does not change though. Tried to change pixels while drawing, apparently not possible in processing?
