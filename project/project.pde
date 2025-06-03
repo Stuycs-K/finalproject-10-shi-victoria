@@ -10,11 +10,12 @@ void setup(){
   }
   img.updatePixels();
 img2 = createGraphics(200, 200);
+//img2=img.get();
 image(img,0,0);
 img2.beginDraw();
 textSize(128);
 //fill(255,255,255);
-img2.text("helpmee", 0,200);
+//img2.text("helpmee", 0,200);
 img2.endDraw();
 img2.updatePixels();
 img=img2.get();
@@ -34,7 +35,9 @@ void draw(){
   if (mousePressed == true) {
     changePixelColor();
   }
-      image(img,0,0);
+  img=img2.get();
+img.updatePixels();
+     // image(img,0,0);
       img2.text("noooo", 0,300);
      for(int i=0; i<img.pixels.length;i++){
   int r = (int)red(img.pixels[i]);
@@ -52,15 +55,13 @@ void print(){
 }
 
 void changePixelColor(){
-image(img,0,0);
+image(img2,0,0);
 img2.beginDraw();
 textSize(128);
 stroke(255);
-line(mouseX, mouseY, pmouseX, pmouseY);
+img2.line(mouseX, mouseY, pmouseX, pmouseY);
 img2.endDraw();
-img2.updatePixels();
-img=img2.get();
-img.updatePixels();
-img.save("temp.png");
+//img2.updatePixels();
+
 
 }
