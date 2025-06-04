@@ -13,6 +13,7 @@ Unlike the image stenography lab we did for class before, this program can creat
 - Red Plane 0
 - Green Plane 0
 - Blue Plane 0
+  
 These are all types of LSB encoding. In StegSolve pixels with a 0th bit in the corresponding color channel with a value of one show up as white while those with a zero show up as black. The tiny difffernces in pixel value are not visible to the human eye which makes this method good at hiding messages.
 
 ### Demonstration
