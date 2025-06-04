@@ -1,9 +1,10 @@
  final static int DRAW = 0;
 final static int RED0 = 1;
-final static int BLUE0= 2;
-final static int GREEN0= 3;
-String[] modes = {"DRAW", "RED0", "BLUE0", "GREEN0"};
+final static int BLUE0= 3;
+final static int GREEN0= 2;
+String[] modes = {"DRAW", "RED 0", "GREEN 0", "BLUE 0"};
   PImage img;
+  PImage img0;
     PGraphics img2;
     
     
@@ -12,7 +13,9 @@ int MODE=DRAW;
 void setup(){
   size(600,600);
   img=loadImage("cat.png");
+    img0=loadImage("cat.png");
   img.resize(600,600);
+  img0.resize(600,600);
 img2 = createGraphics(600, 600);
 
 img2.beginDraw();
@@ -37,19 +40,19 @@ void draw(){
     
  // }
 
-      img2.beginDraw();
-      img2.fill(0);
-img2.textSize(20);
-img2.text(modes[MODE],img2.width-100,img2.height-20);
-img2.endDraw();
+
       image(img2,0,0);
+
+fill(0);
+textSize(20);
+text(modes[MODE],img2.width-100,img2.height-20);
 
      // image(img,0,0);
 }
 
 void keyPressed(){
 if(key==ENTER){
-  print("test");
+  println("Message encoded in "+ modes[MODE]);
   changePixels();
   img.updatePixels();
   img.save("test.png");
@@ -60,8 +63,9 @@ if(keyCode==UP){
 if(keyCode==DOWN){
   MODE--;
 }
-
-
+if(MODE<0)
+MODE=3;
+MODE%=4;
 
 
 }
@@ -99,23 +103,23 @@ void changePixels(){
   img.pixels[i]=255;
     }
   if(MODE==RED0){
-     int r = (int)red(img.pixels[i]);
-        int g = (int)green(img.pixels[i]);
-        int b = (int)blue(img.pixels[i]);
+     int r = (int)red(img0.pixels[i]);
+        int g = (int)green(img0.pixels[i]);
+        int b = (int)blue(img0.pixels[i]);
         r=r|1;
         img.pixels[i]=color(r,g,b);
   }
     if(MODE==BLUE0){
-     int r = (int)red(img.pixels[i]);
-        int g = (int)green(img.pixels[i]);
-        int b = (int)blue(img.pixels[i]);
+     int r = (int)red(img0.pixels[i]);
+        int g = (int)green(img0.pixels[i]);
+        int b = (int)blue(img0.pixels[i]);
         b=b|1;
         img.pixels[i]=color(r,g,b);
   }
     if(MODE==GREEN0){
-     int r = (int)red(img.pixels[i]);
-        int g = (int)green(img.pixels[i]);
-        int b = (int)blue(img.pixels[i]);
+     int r = (int)red(img0.pixels[i]);
+        int g = (int)green(img0.pixels[i]);
+        int b = (int)blue(img0.pixels[i]);
         g=g|1;
         img.pixels[i]=color(r,g,b);
   }
