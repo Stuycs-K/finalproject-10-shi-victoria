@@ -12,7 +12,7 @@ int MODE=DRAW;
 //you draw onto img2 and when you press enter what you draw changes the LSB of the orginal image
 void settings() {
   img = loadImage("cat.png");
-  size(img.width, img.height);  // dynamically set canvas size
+  size(img.width, img.height);
 }
 
 void fileSelected(File selection) {
