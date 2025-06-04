@@ -26,7 +26,7 @@ void draw(){
   //  img.updatePixels();
 
   if (mousePressed == true) {
-    changePixelColor();
+    writeMessage();
     
   }
 
@@ -46,12 +46,13 @@ if(key==ENTER){
 }
 
 
-void changePixelColor(){
+void writeMessage(){
 
 img2.beginDraw();
 textSize(128);
 stroke(255);
-img2.line(mouseX, mouseY, pmouseX, pmouseY);
+//img2.line(mouseX, mouseY, pmouseX, pmouseY);
+img2.set(mouseX,mouseY,color(0));
 img2.endDraw();
 //image(img2,0,0);
 //img2.updatePixels();
