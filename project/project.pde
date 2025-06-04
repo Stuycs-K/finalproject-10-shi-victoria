@@ -1,7 +1,13 @@
+ final static int DRAW = 0;
+final static int RED0 = 1;
+final static int BLUE0= 2;
+final static int GREEN0= 3;
   PImage img;
-
     PGraphics img2;
-
+    
+    
+int MODE=DRAW;
+//you draw onto img2 and when you press enter what you draw changes the LSB of the orginal image
 void setup(){
   size(600,600);
   img=loadImage("cat.png");
@@ -42,7 +48,12 @@ if(key==ENTER){
   img.updatePixels();
   img.save("test.png");
 }
-
+if(keyCode==UP){
+  MODE++;
+}
+if(keyCode==DOWN){
+  MODE--;
+}
 }
 
 void mouseDragged() {
@@ -74,8 +85,16 @@ void changePixels(){
  img2.loadPixels();
   for(int i=0; i<img2.pixels.length;i++){
   if(img2.pixels[i]==color(0,0,0)){
-    print("asdfas");
+    if(MODE==DRAW){
   img.pixels[i]=255;
+    }
+  if(MODE==RED0){
+     int r = (int)red(img.pixels[i]);
+        int g = (int)green(img.pixels[i]);
+        int b = (int)blue(img.pixels[i]);
+        r=r|1;
+        img.pixels[i]=color(r,g,b);
+  }
 }
   }
   img.updatePixels();
