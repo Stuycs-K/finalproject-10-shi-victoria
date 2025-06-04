@@ -1,7 +1,7 @@
 # LSB Stenography in Processing
 
 ### Project Description
-The goal of this project was too create a program that could hide messages in the least signigigant bits of pixel values in images.
+The goal of this project was too create a program that could hide messages in the least signifigant bits of pixel values in images.
 Unlike the image stenography lab we did for class before, this program can create messages visbile to the naked eye when viewing through StegSolve and is much more interactive.
 
 ### How it works
