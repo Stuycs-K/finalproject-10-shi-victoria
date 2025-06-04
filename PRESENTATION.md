@@ -1,7 +1,7 @@
 # LSB Stenography in Processing
 
 ### Project Description
-The goal of this project was too create a program that could hide messages in the least signifigant bits of pixel values in images.
+The goal of this project was to create a program that could hide messages in the least signifigant bits of pixel values in images.
 Unlike the image stenography lab we did for class before, this program can create messages visbile to the naked eye when viewing through StegSolve and is much more interactive.
 
 ### How it works
@@ -14,7 +14,7 @@ Unlike the image stenography lab we did for class before, this program can creat
 - Green Plane 0
 - Blue Plane 0
   
-These are all types of LSB encoding. In StegSolve pixels with a 0th bit in the corresponding color channel with a value of one show up as white while those with a zero show up as black. The tiny difffernces in pixel value are not visible to the human eye which makes this method good at hiding messages.
+These are all types of LSB encoding where the last bit in the pixel value is used to hide a message. In StegSolve pixels with a 0th bit in the corresponding color channel with a value of one show up as white while those with a zero show up as black. The tiny difffernces in pixel value are not visible to the human eye since the last bit contributes the least to the overall color of the pixel, which makes this method good at hiding messages.
 
 ### Controls
 The UP and DOWN keys can be used to toggle between the different encoding modes while pressing ENTER results in everything drawn on the screen being encoded into the original picture.
