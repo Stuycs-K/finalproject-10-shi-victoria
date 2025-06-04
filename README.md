@@ -15,5 +15,5 @@ Once a user runs the program, they have to choose a image to encode. Once they c
 
 ### Resources/ References:
 
--(https://wiki.bi0s.in/steganography/stegsolve/)
--(https://processing.org/reference)
+*(https://wiki.bi0s.in/steganography/stegsolve/)
+*(https://processing.org/reference)
