@@ -7,6 +7,9 @@
 ### Project Description:
 
 This program is a interactive image editor that lets users hide secret messages visible in StegSolve using Least Signifigant Bit Stenography. 
+
+### Video Presentation
+https://drive.google.com/file/d/1n-xGaZhzMbQemXEu1AKENdrh9Le-fU7m/view?usp=drive_link
   
 ### Instructions:
 
