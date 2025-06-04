@@ -1,19 +1,19 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/am3xLbu5)
-# PROJECT NAME HERE (CHANGE THIS!!!!!)
- 
-### GROUP NAME HERE (CHANGE THIS!!!!!)
+# LSB Stenography in Processing
 
-Group Members Here (CHANGE THIS!!!!!)
+### Victoria Shi
+
        
 ### Project Description:
 
-Explain what is this project. (CHANGE THIS!!!!!)
+This program is a interactive image editor that lets users hide secret messages visible in StegSolve using Least Signifigant Bit Stenography. 
   
 ### Instructions:
 
-How does the user install/compile/run the program. (CHANGE THIS!!!!!)
-How does the user interact with this program? (CHANGE THIS!!!!!)
+The user should download processing and open the .pde file.
+Once a user runs the program, they have to choose a image to encode. Once they chose that image then they can drag the mouse to draw on the canvas. The text on the bottom right tells you what encoding mode you are in and presing enter encodes what you drew into the image you chose. 
 
 ### Resources/ References:
 
-list here(CHANGE THIS!!!!!)
+* (https://wiki.bi0s.in/steganography/stegsolve/)
+* (https://processing.org/reference)
