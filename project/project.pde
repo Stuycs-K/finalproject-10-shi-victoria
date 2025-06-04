@@ -10,13 +10,17 @@ String[] modes = {"DRAW", "RED 0", "GREEN 0", "BLUE 0"};
     
 int MODE=DRAW;
 //you draw onto img2 and when you press enter what you draw changes the LSB of the orginal image
+void settings() {
+  img = loadImage("cat.png");
+  size(img.width, img.height);  // dynamically set canvas size
+}
+
+
 void setup(){
-  size(600,600);
-  img=loadImage("cat.png");
-    img0=loadImage("cat.png");
-  img.resize(600,600);
-  img0.resize(600,600);
-img2 = createGraphics(600, 600);
+
+  img0=loadImage("cat.png");
+
+img2 = createGraphics(img.width, img.height);
 
 img2.beginDraw();
 img2.background(255);
@@ -52,7 +56,7 @@ text(modes[MODE],img2.width-100,img2.height-20);
 
 void keyPressed(){
 if(key==ENTER){
-  println("Message encoded in "+ modes[MODE]);
+  println("Message encoded to "+ modes[MODE]);
   changePixels();
   img.updatePixels();
   img.save("test.png");
