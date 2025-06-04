@@ -2,6 +2,7 @@
 final static int RED0 = 1;
 final static int BLUE0= 2;
 final static int GREEN0= 3;
+String[] modes = {"DRAW", "RED0", "BLUE0", "GREEN0"};
   PImage img;
     PGraphics img2;
     
@@ -36,8 +37,13 @@ void draw(){
     
  // }
 
-      
+      img2.beginDraw();
+      img2.fill(0);
+img2.textSize(20);
+img2.text(modes[MODE],img2.width-100,img2.height-20);
+img2.endDraw();
       image(img2,0,0);
+
      // image(img,0,0);
 }
 
@@ -54,6 +60,10 @@ if(keyCode==UP){
 if(keyCode==DOWN){
   MODE--;
 }
+
+
+
+
 }
 
 void mouseDragged() {
@@ -93,6 +103,20 @@ void changePixels(){
         int g = (int)green(img.pixels[i]);
         int b = (int)blue(img.pixels[i]);
         r=r|1;
+        img.pixels[i]=color(r,g,b);
+  }
+    if(MODE==BLUE0){
+     int r = (int)red(img.pixels[i]);
+        int g = (int)green(img.pixels[i]);
+        int b = (int)blue(img.pixels[i]);
+        b=b|1;
+        img.pixels[i]=color(r,g,b);
+  }
+    if(MODE==GREEN0){
+     int r = (int)red(img.pixels[i]);
+        int g = (int)green(img.pixels[i]);
+        int b = (int)blue(img.pixels[i]);
+        g=g|1;
         img.pixels[i]=color(r,g,b);
   }
 }
