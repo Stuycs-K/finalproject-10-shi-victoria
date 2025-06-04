@@ -25,10 +25,10 @@ void draw(){
 // img.set(mouseX,mouseY,255);
   //  img.updatePixels();
 
-  if (mousePressed == true) {
-    writeMessage();
+ // if (mousePressed == true) {
+  //  writeMessage(mouseX,mouseY);
     
-  }
+ // }
 
       
       image(img2,0,0);
@@ -45,14 +45,25 @@ if(key==ENTER){
 
 }
 
+void mouseDragged() {
+ writeMessage(pmouseX, pmouseY);
+}
 
-void writeMessage(){
+
+void writeMessage(int x, int y){
 
 img2.beginDraw();
-textSize(128);
 stroke(255);
 //img2.line(mouseX, mouseY, pmouseX, pmouseY);
-img2.set(mouseX,mouseY,color(0));
+
+int radius=5;
+for (int i = -radius; i <= radius; i++) {
+    for (int j = -radius; j <= radius; j++) {
+      int tempX=x+i;
+      int tempY=y+j;
+img2.set(tempX,tempY,color(0));
+    }
+}
 img2.endDraw();
 //image(img2,0,0);
 //img2.updatePixels();
