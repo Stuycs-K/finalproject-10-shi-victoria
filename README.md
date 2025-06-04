@@ -16,6 +16,6 @@ Once a user runs the program, they have to choose a image to encode. Once they c
 ### Resources/ References:
 
 * (https://wiki.bi0s.in/steganography/stegsolve/)
-*        *Used it to download StegSolve and for what types of Bit Planes it looked at
+       * Used it to download StegSolve and for what types of Bit Planes it looked at
 * (https://processing.org/reference)
        * Used as documentation/references for processing objects and functions like PGraphics
