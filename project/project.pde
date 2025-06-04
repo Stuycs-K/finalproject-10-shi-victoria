@@ -6,7 +6,7 @@ String[] modes = {"DRAW", "RED 0", "GREEN 0", "BLUE 0"};
   PImage img;
   PImage img0;
     PGraphics img2;
-    
+boolean image= false;
     
 int MODE=DRAW;
 //you draw onto img2 and when you press enter what you draw changes the LSB of the orginal image
@@ -15,10 +15,21 @@ void settings() {
   size(img.width, img.height);  // dynamically set canvas size
 }
 
-
+void fileSelected(File selection) {
+  if (selection == null) {
+    println("Image not selected");
+  } else {
+    img=loadImage(selection.getAbsolutePath());
+    img0=loadImage(selection.getAbsolutePath());
+    println("User selected " + selection.getAbsolutePath());
+    if(img==null){
+    println("Couldn't load image");
+  exit();}
+  }
+}
 void setup(){
-
-  img0=loadImage("cat.png");
+selectInput("Select an image to hide data in:", "fileSelected");
+  //img0=loadImage("cat.png");
 
 img2 = createGraphics(img.width, img.height);
 
@@ -56,7 +67,7 @@ text(modes[MODE],img2.width-100,img2.height-20);
 
 void keyPressed(){
 if(key==ENTER){
-  println("Message encoded to "+ modes[MODE]);
+  println("Message encoded in "+ modes[MODE]+" to test.png");
   changePixels();
   img.updatePixels();
   img.save("test.png");
